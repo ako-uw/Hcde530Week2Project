@@ -7,12 +7,13 @@ import csv
 filename = "demo_responses.csv"
 responses = []
 
+# read the csv file and append the rows to the responses list
 with open(filename, newline="", encoding="utf-8") as f:
     reader = csv.DictReader(f)
     for row in reader:
         responses.append(row)
 
-
+# a function to count the number of words in a response
 def count_words(response):
     """Count the number of words in a response string.
 
